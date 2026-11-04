@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artificial-life-trading-ecosystem"
+version = "0.1.0"
+description = "Repository foundation for an artificial-life trading ecosystem"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.4",
+  "tensorflow>=2.16",
+  "streamlit>=1.35",
+  "plotly>=5.22",
+  "networkx>=3.3",
+  "PyYAML>=6.0",
+  "pytest>=8.0",
+  "python-dotenv>=1.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["artificial_life_trading_ecosystem*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
